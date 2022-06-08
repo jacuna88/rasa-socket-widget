@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<style>
+.rw-conversation-container .rw-header.rw-with-subtitle{background-color: #6DB657; }
+.rw-conversation-container .rw-messages-container .rw-message .rw-client{background-color: #6DB657; }
+ button.rw-launcher{background-color: #6DB657; }
+.rw-launcher:focus {background-color: #6DB657; }
+.rw-launcher.rw-hide-sm{background-color: #6DB657; }
+.rw-conversation-container .rw-reply{background-color: #6DB657; 
+                                     border: 1px solid #6DB657; }
+.rw-conversation-container .rw-send .rw-send-icon-ready {
+    fill: #6DB657; }  
+</style>
+
+<script>!(function () {
+  let e = document.createElement("script"),
+    t = document.head || document.getElementsByTagName("head")[0];
+  (e.src =
+    "https://cdn.jsdelivr.net/npm/rasa-webchat@1.0.1/lib/index.js"),
+    // Replace 1.x.x with the version that you want
+    (e.async = !0),
+    (e.onload = () => {
+      window.WebChat.default(
+        {
+          initPayLoad: '/greet',
+          customData: { language: "en" },
+          socketUrl: "https://fc3d-186-28-50-60.ngrok.io/",
+          title : "Redimed",
+          subtitle : "Chat-bot powered by Laguna-ai",
+          profileAvatar : "rob.svg",
+          showFullScreenButton : true,
+          inputTextFieldHint : "What's in your mind?",
+          // add other props here
+        },
+        null
+      );
+    }),
+    t.insertBefore(e, t.firstChild);
+})();
+</script>
+</body>
+</html>
